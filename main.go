@@ -1,4 +1,3 @@
-
 /* MIT License
 
 * Copyright (c) 2025 ᥇ꪶꪖᥴᛕᦓᥴꪗꪻꫝꫀ
@@ -26,14 +25,17 @@ package main
 import ("fmt"
         "os")
 
+        
 func main(){
 
     commandArgs := os.Args[1:]
-    a := []byte("a")  
-    
+        
     for _, arg := range commandArgs{
 
-    	if arg == "-all"{
+        if arg == "-h"|| arg == "-help" || arg == "--help"{
+            help()
+            
+    	} else if arg == "-all"{
     		fmt.Println("Arg used:", arg)
 
     	} else if arg == "-rs" {
@@ -41,56 +43,53 @@ func main(){
     		
     	} else if arg == "-ap"{
     		fmt.Println("Arg used:", arg)
+
     	} else {
     		fmt.Println("unknown arg:", arg)
     	}
     }
-    fmt.Println(commandArgs, a)
 }
 
 func help(){
 
-// this function contains documentation, usage with examples, of the tool.
+//this function contains documentation, usage with examples, of the tool
 
-/*
+fmt.Println( "USAGE:\n",
 
-USAGE:
---
-**Show all ip addresses available to investigate (in local network) with appropriate info.**
+"--\n",
+"Show all ip addresses available to investigate (in local network) with appropriate info.\n",
 
+"Eg:\n",
+" pJ -all\n",
+"\n",
 
-Eg:
- pJ -all
+"Sniffing packets.\n",
+"Eg:\n", 
+"pJ -sniff <ip addr> -p <port no.>\n",
+"\n",
+"or\n",
+"\n",
+"Eg:\n",
+" pJ -sp <ip addr> -p <port no.>\n",
 
-**Sniffing packets.**
-Eg: 
-pJ -sniff <ip addr> -p <port no.>
+"\n", 
+"To sniff all packets it can sniff.\n",
+"Eg:\n",
+"pJ -sniff <ip addr> -all\n",
+"\n",
+"or\n",
+"\n",
+"Eg:\n",
+"pJ -sp <ip addr> -all\n",
+"\n",
+"To check.\n",
+"running services.\n",
 
-or
- 
-Eg:
- pJ -sp <ip addr> -p <port no.>
+"Eg:\n",
+"pJ -rs <ip addr>\n",
+"\n",
+"available ports.\n",
 
- 
-**To sniff all packets it can sniff.**
-Eg:
-pJ -sniff <ip addr> -all
-
-or 
-  
-Eg:
-pJ -sp <ip addr> -all
-
-**To check.**
-running services.
-
-Eg:
-pJ -rs <ip addr>
-
-available ports.
-
-Eg: 
-pJ -ap <ip addr>
-
-*/
+"Eg:\n", 
+"pJ -ap <ip addr>\n")
 }
