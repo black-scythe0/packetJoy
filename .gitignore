@@ -1,4 +1,4 @@
 ##--backup-go-files[emacs]--##
  *.go#
  *.go~
- ./.ninja_log/
+.ninja_log
