@@ -1,0 +1,5 @@
+
+rule goc
+    command = go build $in
+
+build main: goc main.go
