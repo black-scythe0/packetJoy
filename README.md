@@ -1,4 +1,4 @@
-##packetJoy
+## packetJoy
 
 a simple tool to investigate devices on a network.
 
@@ -6,5 +6,5 @@ a simple tool to investigate devices on a network.
 
 
 
-###License
+### License
 this project is under MIT-License. 
