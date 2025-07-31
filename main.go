@@ -1,3 +1,4 @@
+
 /* MIT License
 
 * Copyright (c) 2025 ᥇ꪶꪖᥴᛕᦓᥴꪗꪻꫝꫀ
@@ -23,11 +24,13 @@
 package main
 
 import ("fmt"
-        "os")
+        "os"
+        "packetJoy/sniffer"
+        )
 
         
 func main(){
-
+    a := sniffer.Demo()
     commandArgs := os.Args[1:]
         
     for _, arg := range commandArgs{
@@ -46,13 +49,16 @@ func main(){
 
     	} else {
     		fmt.Println("unknown arg:", arg)
+
     	}
+    
     }
+   fmt.Println(a)
 }
 
 func help(){
 
-//this function contains documentation, usage with examples, of the tool
+//this function contains usage with examples, of the tool
 
 fmt.Println( "USAGE:\n",
 
