@@ -1,6 +1,6 @@
 ### USAGE
 --
-**Show all ip addresses available to investigate (in local network) with appropriate info.**
+**Show all ip addresses available to investigate (in local network) with appropriate info.** --
 
 
 - Eg:
